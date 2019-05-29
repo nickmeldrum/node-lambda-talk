@@ -18,6 +18,7 @@ Others? (worthy mentions?):
  * faast.js (https://faastjs.org/)
  * pulumi?
  * packer
+ * sceptre (https://github.com/cloudreach/sceptre)
 
 ## Considerations for discussion
 
@@ -56,3 +57,16 @@ open source
 good responses to issues
 
 local story: unit tests only - integration tests etc. - deploy to cloud - luckily deployment is quick and simple
+
+## Talk structure
+
+ * what is serverless/ lambda
+ * brief overview of aws resources you might use with lambda
+ * some interesting use cases of lambda
+   * server rendering
+   * chat bots
+   * alexa apps?
+   * web app workers
+   * full on web backends?
+ * examples of provisioning lambda backends using javascript
+ * wider discussion on other provisioning methodologies
