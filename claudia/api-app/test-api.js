@@ -8,3 +8,4 @@ const testUrl = `https://${claudiaConfig.api.id}.execute-api.${claudiaConfig.lam
   const response = await request(testUrl, {})
   console.log(`RESPONSE: ${response.body}`)
 })()
+
