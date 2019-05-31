@@ -27,6 +27,7 @@ Others? (worthy mentions?):
 
 ## Research:
 
+ * https://geekflare.com/serverless-apps-frameworks/
  * https://serverless.com/learn/comparisons/ (serverless framework sales tool of course)
  * https://github.com/awslabs/aws-cdk - what is the AWS Cloud Development Kit
  * https://lumigo.io/blog/comparison-of-lambda-deployment-frameworks/
@@ -61,6 +62,7 @@ local story: unit tests only - integration tests etc. - deploy to cloud - luckil
 ## Talk structure
 
  * what is serverless/ lambda
+ * define infrastructure as code
  * brief overview of aws resources you might use with lambda
  * some interesting use cases of lambda
    * server rendering
