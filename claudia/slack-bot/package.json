@@ -1,0 +1,16 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "make": "claudia create --region us-east-1 --api-module index",
+    "update": "claudia update",
+    "test": "echo TODO!",
+    "destroy": "claudia destroy"
+  },
+  "dependencies": {
+    "claudia": "^5.5.0",
+    "claudia-bot-builder": "^4.5.0"
+  }
+}

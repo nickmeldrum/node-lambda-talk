@@ -19,6 +19,7 @@ Others? (worthy mentions?):
  * pulumi?
  * packer
  * sceptre (https://github.com/cloudreach/sceptre)
+ * http://senecajs.org/
 
 ## Considerations for discussion
 
@@ -72,3 +73,35 @@ local story: unit tests only - integration tests etc. - deploy to cloud - luckil
    * full on web backends?
  * examples of provisioning lambda backends using javascript
  * wider discussion on other provisioning methodologies
+
+topics: what is lambda proxy integration?
+
+using lambda as a web server
+
+using express? use `aws-serverless-express` to translate an api-gateway request into an express request/response
+
+bit heavy weight - important to keep lambdas light - so recommend to use Jeremy Dalys (https://www.jeremydaly.com/) `lambda api` (https://github.com/jeremydaly/lambda-api)
+
+topics: stages and step functions?
+
+
+## Notes on claudia
+
+Problems:
+
+ 1. if create fails half way through - end up with resources created that have to be deleted manually - leaves things around
+ 2. very simple namespacing based on app name - chance of collisions - not going to work in an account that is used for other things
+ 3. using legacy slack integrations - should use the events api instead of outgoing webhooks
+ 4. no management of other aws resources, e.g. s3/sns/dynamodb etc. - very limited to lambda only with some automated api gateway stuff on top
+
+Nice things:
+
+ 1. Got some nice extension points - post deploy hooks with promisified api gateway object etc.
+ 2. built in support for generating an 'aws-serverless-express' web server
+ 3. build in support for responding to s3 events/ sns event source
+
+Good use cases:
+
+ 3. bots - slack bot/ alexa skill etc.
+ 4. simple website functionality - e.g. save some details in dynamo or stripe payment integration
+

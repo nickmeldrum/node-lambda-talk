@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "make": "claudia create --region us-east-1 --handler hello-world.handler",
+    "update": "claudia update",
+    "test": "claudia test-lambda --event event.json",
+    "destroy": "claudia destroy"
+  },
   "dependencies": {
     "claudia": "^5.5.0"
   }
