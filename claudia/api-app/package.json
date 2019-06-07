@@ -4,13 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "make": "claudia create --region us-east-1 --api-module api-app",
+    "update": "claudia update",
     "test": "node test-api.js",
-    "watch": "nodemon test-api.js"
+    "watch": "nodemon test-api.js",
+    "destroy": "claudia destroy"
   },
   "dependencies": {
     "claudia-api-builder": "^4.1.2",
     "got": "^9.6.0",
     "nodemon": "^1.19.0",
-    "tunnel": "^0.0.6"
+    "tunnel": "^0.0.6",
+    "url-parse": "^1.4.7"
   }
 }

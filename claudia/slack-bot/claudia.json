@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "slackbot-executor",
+    "name": "slackbot",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "wcqhoksphc",
+    "module": "index"
+  }
+}
