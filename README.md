@@ -61,6 +61,7 @@ abstract:
        * could mean "managed services": aws cognito, dynamodb, sns, sqs, appsync, cloudfront, api gateway etc. etc. - i.e. you can create a whole backend without having to manage a single server/ ec2 instance
        * confusingly could mean "the serverless framework" - a cloud deployment framework that is cleverly calling themselves "serverless" from a branding perspective
       * (TODO: check that lambda/terraform youtube talk for good description - bookmarked on home macbook?)
+      https://www.youtube.com/watch?v=HHCDLyLX7I0&t=328s
    * what is lambda?
  * who (image ideas: megacorp)
    * cloud providers:
@@ -75,6 +76,22 @@ abstract:
      * cloud 1.0 comes along: VPS - now I don't have to manage my hardware - yay! - still have to patch the OS, manage services, manage license, manage hacks etc.
      * cloud 2.0 comes along: "compute instances" (otherwise known as EC2!) - now I don't have to manage
      * TODO ^ above is wrong about VPS/ EC2 - also continue with v3 - what is serverless above ec2?
+     VPS around 2001 - VMWare ESX Server
+      most systems/ companies I have been involved with still used their own tin in a dc isntead of vps - probably concerns about virtualization? but small systems could use them - hard to scale though. web applications were being built often assuming they would only work on 1 web server - large effort to build an application that would work on a "web farm" and often times the tin would have to be bought for peak scale and just be sitting around the rest of the year.
+     EC2 released 2006 - essentially a VPS still but with some key improvements that opened up a whole new world:
+       * pay by the hour instead of by the month
+       * still more expensive if on all the time
+       * orchestration interface
+       * provides "elasticity"
+    2009 Got a bit more reasonable to use - with ELB, RDS, Cloudwatch, Cloudfront and VPCs
+     Lambda released 2014
+			 * Function as a service
+          * don't have to manage the OS, patching, licenses etc
+          * "pay as you go" - pay per execution (and it's cheap)
+          * holds the promise of reduced complexity in the future, but for now it's still pretty complex, the complexity has just moved to a different place (complexity in rigorous splitting up and decoupling of your system, kdealing with throttling and cold starts, in dealing with good monitoring, ....)
+          * but more than elasticity it gives amazing flexibility
+          * automatic horizontal scaling with zero effort
+          * LOTS of limitations which if you don't respect can SERIOUSLY bite you in the ass (limit on concurrent executions i.e. throttling, startup latency i.e. cold starts, local testing)
      * then mention containers/k8s?
  * how
 
