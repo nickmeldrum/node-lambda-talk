@@ -147,6 +147,7 @@ The deployment techs
 |----------------------|--------------|---------------------------|----------|
 
 TODO NEXT STEPS:
+https://www.youtube.com/watch?v=EBSdyoO3goc
 
  * add the events/dates labels to the charts on the history of the www
  * slide after history talking about the acceleration of all this + the automation of a lot of our job
@@ -156,6 +157,14 @@ TODO NEXT STEPS:
  * slide showing choosing JavaScript for the prod code/ JS for the infrastructure code? JS all the way down!
  * go into examples of each?
 
+
+ TODO Explain lambda proxy integration
+and pros v cons
+what does lambda proxy integration do?
+passes the raw request through to your lambda - your lambda deals with routing - e.g. running express web server
+now your lambda knows much more about how it's being called
+good for fast prototyping - less api gateway work to do
+you lose api gateway 
 
  * brief overview of aws resources you might use with lambda
  * some interesting use cases of lambda
