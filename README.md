@@ -153,6 +153,7 @@ TODO NEXT STEPS:
  * turn that "deployment techs" table into a matrix chart
  * slide that shows all the others (logos animate on top of each other pasting over the page)
  * talk about which to choose compared to project/ team size/ goals etc.?
+ * slide showing choosing JavaScript for the prod code/ JS for the infrastructure code? JS all the way down!
  * go into examples of each?
 
 
