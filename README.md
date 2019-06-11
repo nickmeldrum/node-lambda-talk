@@ -95,6 +95,67 @@ abstract:
      * then mention containers/k8s?
  * how
 
+serverless: why choose javascript?
+
+  Java, Go, PowerShell, Node.js JavaScript, C#, Python, and Ruby
+
+Java and C# suffers from slow startup times (being worked on but still) and needs higher Memory footprint
+warm perf: .Net core 2.0 easily winning benchmarks
+Go or Node.js can be fast with smaller footprint
+Node and Python have great platform support: AWS, Azure and GCP
+Node is JavaScript - largest number of devs "know it"
+Node.js well suited, fast start
+
+No of devs globally:
+
+|------------|----------------|
+| Language   | Number of devs |
+|------------|----------------|
+| Java       | 7,600,000      |
+| JavaScript | 10,700,000     |
+| C#         | 6,200,000      |
+| Python     | 7,000,000      |
+|------------|----------------|
+
+Source: Slashdot
+
+StackOverflow survey 2019: Programming languages:
+
+|------------|----------------------------|
+| Language   | Number of respondents used |
+|------------|----------------------------|
+| JavaScript | 67.8%                      |
+| Python     | 41.7%                      |
+| Java       | 41.1%                      |
+| C#         | 31.0%                      |
+| Go         | 8.2%                       |
+|------------|----------------------------|
+
+The deployment techs
+
+|----------------------|--------------|---------------------------|----------|
+| Name                 | Code/ Config | Opinionated -> Complexity | Maturity |
+|----------------------|--------------|---------------------------|----------|
+| Cloudformation/SAM   | Config       | Complex                   | V mature |
+| AWS SDK              | Code         | Complex                   | V mature |
+| AWS CDK              | Code         | Complex?                  | early    |
+| Serverless Framework | Config       | Half-half?                | mid      |
+| Claudia              | Code         | Opinionated               | early    |
+| Terraform            | Config       | Complexity++              | mature   |
+| ZEIT now             | No Config    | Opinionated++             | early    |
+| Netlify              | ?            | ?                         | ?        |
+|----------------------|--------------|---------------------------|----------|
+
+TODO NEXT STEPS:
+
+ * add the events/dates labels to the charts on the history of the www
+ * slide after history talking about the acceleration of all this + the automation of a lot of our job
+ * turn that "deployment techs" table into a matrix chart
+ * slide that shows all the others (logos animate on top of each other pasting over the page)
+ * talk about which to choose compared to project/ team size/ goals etc.?
+ * go into examples of each?
+
+
  * brief overview of aws resources you might use with lambda
  * some interesting use cases of lambda
    * server rendering
