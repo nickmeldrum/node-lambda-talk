@@ -1,3 +1,5 @@
 credentials
 node_modules/
 .DS_Store
+outfile
+*.zip
