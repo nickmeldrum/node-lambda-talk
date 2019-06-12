@@ -3,7 +3,7 @@ set -e
 
 aws iam create-role \
   --role-name s3triggertest \
-  --assume-role-policy-document file://trust.json
+  --assume-role-policy-document file://trust-policy.json
 
 aws iam attach-role-policy \
   --role-name s3triggertest \

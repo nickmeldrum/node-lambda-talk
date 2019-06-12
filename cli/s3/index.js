@@ -11,5 +11,9 @@ module.exports.handler = async (event, context) => {
 
   json.foo += 1
 
-  await s3.putObject({Bucket, Key: Key.replace('input', 'output'), Body: JSON.stringify(json) }).promise()
+  await s3.putObject({
+    Bucket,
+    Key: Key.replace('input', 'output'),
+    Body: JSON.stringify(json)
+  }).promise()
 }
