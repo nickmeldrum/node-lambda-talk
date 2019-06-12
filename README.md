@@ -149,10 +149,21 @@ The deployment techs
 TODO NEXT STEPS:
 https://www.youtube.com/watch?v=EBSdyoO3goc
 
- * add the events/dates labels to the charts on the history of the www
+ CLI WORK TO HOOK TO API GATEWAY
+
+ THEN SHOW HOW CLAUDIA DOES IT EASIER
+
+ THEN ZEIT NOW OR SCEPTRE OR SENECA OR APEX OR ARCHITECT?
+
+ THEN HOW SERVERLESS DOES IT
+
+ THEN HOW TERRAFORM DOES IT?
+
+ THEN HOW CLOUDFORMATION DOES IT?
+
+
  * slide after history talking about the acceleration of all this + the automation of a lot of our job
  * turn that "deployment techs" table into a matrix chart
- * slide that shows all the others (logos animate on top of each other pasting over the page)
  * talk about which to choose compared to project/ team size/ goals etc.?
  * slide showing choosing JavaScript for the prod code/ JS for the infrastructure code? JS all the way down!
  * go into examples of each?
@@ -245,6 +256,7 @@ Problems:
  2. very simple namespacing based on app name - chance of collisions - not going to work in an account that is used for other things
  3. using legacy slack integrations - should use the events api instead of outgoing webhooks
  4. no management of other aws resources, e.g. s3/sns/dynamodb etc. - very limited to lambda only with some automated api gateway stuff on top
+ 5. very opinionated - take its conventions on packing the packages
 
 Nice things:
 
