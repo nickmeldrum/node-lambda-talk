@@ -4,11 +4,11 @@ provider:
   name: aws
   runtime: nodejs10.x
 
-  functions:
-    helloWorld:
-      handler: index.handler
-      events:
-        - http:
+functions:
+  helloWorld:
+    handler: index.handler
+    events:
+      - http:
           path: haihai
           method: get
           cors: true

@@ -16,4 +16,7 @@ sam deploy \
   --capabilities CAPABILITY_IAM \
   --parameter-overrides S3BucketName=nick-sam-greeting-code
 
-ENDPOINT=$(aws cloudformation describe-stacks --stack-name sam-greeting-2 --query 'Stacks[0].Outputs[?OutputKey==`ProdDataEndpoint`].OutputValue' --output text)
+ENDPOINT=$(aws cloudformation describe-stacks \
+  --stack-name sam-greeting-2 \
+  --query 'Stacks[0].Outputs[?OutputKey==`ProdDataEndpoint`].OutputValue' \
+  --output text)

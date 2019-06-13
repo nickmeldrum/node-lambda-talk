@@ -4,3 +4,4 @@ node_modules/
 outfile
 *.zip
 sam-packaged.yaml
+.serverless

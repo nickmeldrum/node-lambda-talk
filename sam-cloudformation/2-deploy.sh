@@ -7,6 +7,7 @@ sam package \
   --s3-bucket nick-sam-greeting-code
 
 set +e
+
 sam deploy \
   --template-file sam-packaged.yaml \
   --stack-name sam-greeting \
