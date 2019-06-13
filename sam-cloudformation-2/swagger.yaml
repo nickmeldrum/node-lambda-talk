@@ -37,9 +37,11 @@ paths:
           validateRequestParameters: true
       x-amazon-apigateway-integration:
         type: aws
-        httpMethod: GET
+        httpMethod: POST
         uri:
-          Fn::Sub: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/${MyFunction.Arn}/invocations
+          Fn::Sub: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/${GreetingsFunction.Arn}/invocations
+        requestParameters:
+          integration.request.querystring.name: method.request.querystring.name
         responses:
           default:
             statusCode: 200

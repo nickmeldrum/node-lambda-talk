@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion : "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Oh Hai there service
+Parameters:
+  S3BucketName:
+    Type: String
+    Description: The name of the S3 bucket in which the Swagger specification is stored
+Resources:
+  OhHaiApiGateway2: 
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      DefinitionBody:
+        Fn::Transform:
+          Name: AWS::Include
+          Parameters:
+            Location:
+              Fn::Join:
+                - ''
+                - - 's3://'
+                  - Ref: S3BucketName
+                  - '/swagger.yaml'
+  GreetingsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: GreetingsFunction2
+      Runtime: nodejs10.x
+      Handler: index.handler
+      CodeUri: app/
+      Events:
+        Greeting:
+          Type: Api
+          Properties:
+            RestApiId: !Ref OhHaiApiGateway2
+            Path: /hello
+            Method: GET
+Outputs:
+  ProdDataEndpoint:
+    Description: API Prod stage endpoint
+    Value:
+      Fn::Sub: https://${OhHaiApiGateway2}.execute-api.${AWS::Region}.amazonaws.com/prod/
