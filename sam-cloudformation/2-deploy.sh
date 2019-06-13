@@ -1,11 +1,12 @@
 #!/bin/bash
-set -e
+set -ex
 
 sam package \
   --template-file sam-template.yaml \
   --output-template-file sam-packaged.yaml \
   --s3-bucket nick-sam-greeting-code
 
+set +e
 sam deploy \
   --template-file sam-packaged.yaml \
   --stack-name sam-greeting \

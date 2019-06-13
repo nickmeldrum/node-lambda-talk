@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 aws cloudformation delete-stack \
 	--stack-name sam-greeting-2 \

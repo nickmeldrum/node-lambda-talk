@@ -2,8 +2,6 @@ openapi: 3.0.1
 info:
   title: Oh Hai there service
   version: 1.0.0
-servers:
-- url: //ohhai.com/
 paths:
   /hello:
     get:
@@ -40,8 +38,13 @@ paths:
         httpMethod: POST
         uri:
           Fn::Sub: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/${GreetingsFunction.Arn}/invocations
-        requestParameters:
-          integration.request.querystring.name: method.request.querystring.name
+        requestTemplates:
+          application/json: |
+            {
+              "params": {
+                "name": "$input.params('name')"
+              }
+            }
         responses:
           default:
             statusCode: 200

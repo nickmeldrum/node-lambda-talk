@@ -1,4 +1,4 @@
 #!/bin/bash
-set -e
+set -ex
 
-curl https://9z7tbumqy6.execute-api.us-east-1.amazonaws.com/prod/hello\?name\=Maersk
+curl $1/hello\?name\=Maersk

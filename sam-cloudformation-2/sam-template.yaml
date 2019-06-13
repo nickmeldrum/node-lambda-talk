@@ -14,12 +14,7 @@ Resources:
         Fn::Transform:
           Name: AWS::Include
           Parameters:
-            Location:
-              Fn::Join:
-                - ''
-                - - 's3://'
-                  - Ref: S3BucketName
-                  - '/swagger.yaml'
+            Location: 's3://nick-sam-greeting-code/swagger.yaml'
   GreetingsFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -38,4 +33,4 @@ Outputs:
   ProdDataEndpoint:
     Description: API Prod stage endpoint
     Value:
-      Fn::Sub: https://${OhHaiApiGateway2}.execute-api.${AWS::Region}.amazonaws.com/prod/
+      Fn::Sub: https://${OhHaiApiGateway2}.execute-api.${AWS::Region}.amazonaws.com/prod
