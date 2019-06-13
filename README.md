@@ -168,6 +168,8 @@ https://www.youtube.com/watch?v=EBSdyoO3goc
  * slide showing choosing JavaScript for the prod code/ JS for the infrastructure code? JS all the way down!
  * go into examples of each?
 
+https://cloudonaut.io/cloudformation-vs-terraform/<Paste>
+https://itnext.io/creating-aws-lambda-applications-with-sam-dd13258c16dd
 
  TODO Explain lambda proxy integration
 and pros v cons

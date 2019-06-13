@@ -1,0 +1,46 @@
+openapi: 3.0.1
+info:
+  title: Oh Hai there service
+  version: 1.0.0
+servers:
+- url: //ohhai.com/
+paths:
+  /hello:
+    get:
+      tags:
+      - Greetings
+      summary: Greets you nicely
+      operationId: getHello
+      parameters:
+      - name: name
+        in: query
+        description: Your name
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: The greeting
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Oh hai there Fred
+        400:
+          description: Bad Request
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+      x-amazon-apigateway-request-validators:
+        basic:
+          validateRequestParameters: true
+      x-amazon-apigateway-integration:
+        type: aws
+        httpMethod: GET
+        uri:
+          Fn::Sub: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/${MyFunction.Arn}/invocations
+        responses:
+          default:
+            statusCode: 200
+components: {}

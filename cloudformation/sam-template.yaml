@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion : "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Oh Hai there service
+Resources:
+  OhHaiApiGateway: 
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionUri: ./swagger.yaml
+  GreetingsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: GreetingsFunction
+      Runtime: nodejs10.x
+      Handler: index.handler
+      CodeUri: ./greetings.zip
+      Events:
+        OhHaiApi:
+          Type: Api
+          Properties:
+            RestApiId: !Ref "OhHaiApiGateway"
+            Path: /hello
+            Method: GET
+      Policies:
+        - AWSLambdaBasicExecutionRole
