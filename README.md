@@ -228,6 +228,28 @@ SenecaJS: http://senecajs.org/
  * very opinionated: pattern matching composition for extension
  * Framework not just deployment tool
 
+Software is eating the world
+https://www.wsj.com/articles/SB10001424053111903480904576512250915629460
+
+cloudformation:
+
+template based
+reuse via nested stacks
+aws native
+
+serverless:
+
+based on cf
+fixes lots of annoyances
+really good community
+
+terraform:
+
+based on sdk instead of cf
+modules built for reuse
+multi platform
+most people have cf already - this needs more learning!
+
 
 https://cloudonaut.io/cloudformation-vs-terraform/<Paste>
 https://itnext.io/creating-aws-lambda-applications-with-sam-dd13258c16dd
