@@ -5,3 +5,4 @@ outfile
 *.zip
 sam-packaged.yaml
 .serverless
+.terraform

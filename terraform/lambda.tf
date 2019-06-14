@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_lambda_function" "example" {
   function_name = "TerraformExample"
 
-  s3_bucket = "kick-tf-example"
+  s3_bucket = "nick-tf-example"
   s3_key    = "v1.0.0/terraform-example.zip"
 
   handler = "index.handler"
@@ -32,6 +32,15 @@ resource "aws_iam_role" "lambda_exec" {
   ]
 }
 EOF
+}
+
+resource "aws_lambda_permission" "apigw_lambda" {
+  statement_id  = "AllowExecutionFromAPIGateway"
+  action        = "lambda:InvokeFunction"
+  function_name = "${aws_lambda_function.example.function_name}"
+  principal     = "apigateway.amazonaws.com"
+
+  source_arn = "${aws_api_gateway_deployment.example.execution_arn}/*/*"
 }
 
 resource "aws_api_gateway_resource" "proxy" {
