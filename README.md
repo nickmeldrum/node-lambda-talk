@@ -147,31 +147,92 @@ The deployment techs
 |----------------------|--------------|---------------------------|----------|
 
 TODO NEXT STEPS:
-https://www.youtube.com/watch?v=EBSdyoO3goc
 
- CLI WORK TO HOOK TO API GATEWAY
+reorder slides to be:
 
- THEN SHOW HOW CLAUDIA DOES IT EASIER
+ * logos
+ * s3 trigger drawing
+ * how cli can build an s3 trigger
+ * api drawing
+ * how sam/cf can build an api (default api settings)
+ * how sam/cf can build an api (swagger defined gateway)
+ * how terraform can build an api
+ * how serverless can build an api
+ * how claudia can build an api
+ * NEW SLIDE: 'the others' (cdk, netlify, zeit now, sceptre, seneca, apex, architect)
+ * end slide: github link for repo to code - rename repo!
 
- THEN ZEIT NOW OR SCEPTRE OR SENECA OR APEX OR ARCHITECT?
+ what is their sweet spot?
+ 
+A bit more presenter notes about good/bad for:
 
- THEN HOW SERVERLESS DOES IT
+  * sam/cf
+  * serverless
+  * terraform
 
- THEN HOW TERRAFORM DOES IT?
+add clara drawings
 
- THEN HOW CLOUDFORMATION DOES IT?
+rehearse whole talk at least twice:
+
+ * check i will be able to see presenter notes - test on tv?
+ * 1st time write down presenter notes with talk plan
+ * time it 2nd time
+
+IF GET EXTRA TIME:
+
+ * video for doing it in CDK?
+ + more complex example?
 
 
- * slide after history talking about the acceleration of all this + the automation of a lot of our job
- * turn that "deployment techs" table into a matrix chart
- * talk about which to choose compared to project/ team size/ goals etc.?
- * slide showing choosing JavaScript for the prod code/ JS for the infrastructure code? JS all the way down!
- * go into examples of each?
+THE OTHERS slide:
+
+AWS CDK: https://github.com/awslabs/aws-cdk
+
+ * define your resources in JS code instead of configuration
+ * underneath it is still cloudformation - either a good or bad thing depending on your stance!
+ * still in developer preview - very early days
+
+netlify: https://www.netlify.com/
+
+ + "all in 1 platform for a website build - static site hosting/ CD, CDN + lambda integrations"
+ * friction free deployments/infrastructure
+ * sweet spot: static sites with possibly a little back end requirements
+
+ZEIT now: https://zeit.co/now
+
+ * "easy serverless application deployment - CI/CD, CDN, static site, monorepo, zero infrastructure code"
+ * very opinionated - really exciting - react server-rending
+ * sweet spot: very similar to netlify!
+    more serverless focused than static focused
+    small to medium size projects could REALLY accelerate using it
+
+architect: https://arc.codes/
+
+ * vendor agnostic!?
+ * JS - npm based
+ * limited to certain aws resources
+
+Apex: https://apex.run/
+
+ * "manage lambda with ease"
+ * integrates with Terraform
+
+Sceptre: https://github.com/cloudreach/sceptre
+
+ * tool to drive "CloudFormation"
+ * to create reuse in CF templates
+
+SenecaJS: http://senecajs.org/
+
+ * "Microservices toolkit for nodejs" -npm based
+ * very opinionated: pattern matching composition for extension
+ * Framework not just deployment tool
+
 
 https://cloudonaut.io/cloudformation-vs-terraform/<Paste>
 https://itnext.io/creating-aws-lambda-applications-with-sam-dd13258c16dd
 
- TODO Explain lambda proxy integration
+ TODO Explain lambda proxy integration?
 and pros v cons
 what does lambda proxy integration do?
 passes the raw request through to your lambda - your lambda deals with routing - e.g. running express web server
