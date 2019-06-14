@@ -7,3 +7,5 @@ aws s3 cp terraform-example.zip \
   s3://nick-tf-example/v1.0.0/terraform-example.zip
 
 terraform apply -auto-approve
+
+rm terraform-example.zip
