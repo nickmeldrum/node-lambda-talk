@@ -170,7 +170,7 @@ A bit more presenter notes about good/bad for:
   * serverless
   * terraform
 
-add clara drawings
+add clara drawings?
 
 rehearse whole talk at least twice:
 
