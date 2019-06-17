@@ -228,6 +228,11 @@ SenecaJS: http://senecajs.org/
  * very opinionated: pattern matching composition for extension
  * Framework not just deployment tool
 
+Pulumi: https://www.pulumi.com/
+
+ * multi platform
+ * "like terraform but using code" - yes javascript
+
 Software is eating the world
 https://www.wsj.com/articles/SB10001424053111903480904576512250915629460
 
