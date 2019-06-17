@@ -162,7 +162,7 @@ reorder slides to be:
  * NEW SLIDE: 'the others' (cdk, netlify, zeit now, sceptre, seneca, apex, architect)
  * end slide: github link for repo to code - rename repo!
 
- what is their sweet spot?
+what is their sweet spot?
  
 A bit more presenter notes about good/bad for:
 
