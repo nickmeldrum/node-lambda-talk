@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 
 aws lambda add-permission \
   --function-name s3triggertest \

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 
 aws iam create-role \
   --role-name s3triggertest \

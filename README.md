@@ -183,7 +183,6 @@ IF GET EXTRA TIME:
  * video for doing it in CDK?
  + more complex example?
 
-
 THE OTHERS slide:
 
 AWS CDK: https://github.com/awslabs/aws-cdk

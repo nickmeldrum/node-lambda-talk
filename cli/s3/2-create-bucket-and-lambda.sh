@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 
 aws s3api create-bucket --bucket nick-s3triggertest
 
