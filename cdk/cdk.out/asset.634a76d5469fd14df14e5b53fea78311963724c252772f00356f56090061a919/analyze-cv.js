@@ -12,8 +12,8 @@ exports.handler = async event =>  {
 		const dynamo = new DynamoDB()
 		await dynamo.putItem({
 			Item: {
-				"Name": { S: cvJson.name || "UNKNOWN" }, 
-				"Skills": { S: cvJson.skills || "UNKNOWN" },
+				"Name": { S: cvJson.name }, 
+				"Skills": { S: cvJson.skills },
 			}, 
 			TableName: process.env.CANDIDATES_TABLE,
 		}).promise()

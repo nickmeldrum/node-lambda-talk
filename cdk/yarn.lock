@@ -23,6 +23,24 @@
     "@aws-cdk/aws-lambda" "^0.34.0"
     "@aws-cdk/cdk" "^0.34.0"
 
+"@aws-cdk/aws-applicationautoscaling@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-applicationautoscaling/-/aws-applicationautoscaling-0.34.0.tgz#bda8d9a02fafda44900d1b52fc1a14e5c4770a88"
+  integrity sha512-XjZJHGDEW77l6kFAPuId8unr6FYX0E0d/qUq7BmjQEbdW/3ljSlZeDQb5sObvHjR7eTpyhaNzLEfePM6A3x2fw==
+  dependencies:
+    "@aws-cdk/aws-autoscaling-common" "^0.34.0"
+    "@aws-cdk/aws-cloudwatch" "^0.34.0"
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
+"@aws-cdk/aws-autoscaling-common@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-autoscaling-common/-/aws-autoscaling-common-0.34.0.tgz#706aaf167a81d2653a8da3658e9f1e788529aa17"
+  integrity sha512-HmYDOACF1o3vR01IHgkY0BfXnZIFUCY8epBUUowYD5zbtqG2Cne/6TGaw9m7hBXJnuQmyGhvlPmtV+nW/aGnLQ==
+  dependencies:
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
 "@aws-cdk/aws-certificatemanager@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-certificatemanager/-/aws-certificatemanager-0.34.0.tgz#0a7aa554726cd8c311d2c4f68588146605a60c54"
@@ -50,6 +68,15 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cloudwatch/-/aws-cloudwatch-0.34.0.tgz#7175457129bc2f60ef6f765d25a915e9e74f4833"
   integrity sha512-w8xWg4wA11g7MS/Cn5CFKv3R9egtsQbGSruoROLpLzI2HY5/MpZ0Is8Nnv2acTKY2unoCIexVo9Ee666NgTVdg==
   dependencies:
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
+"@aws-cdk/aws-dynamodb@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-dynamodb/-/aws-dynamodb-0.34.0.tgz#1a6d6b23bcae7fb1d01af6037dd3b69a65801973"
+  integrity sha512-LhnV/BrCh1iqUXF03mjIXEscMTbgDBhorWmkISRjWv2jjX9o5BfWzBxdyVg82U2YxICAlxx/lbw08qTeoCkdQQ==
+  dependencies:
+    "@aws-cdk/aws-applicationautoscaling" "^0.34.0"
     "@aws-cdk/aws-iam" "^0.34.0"
     "@aws-cdk/cdk" "^0.34.0"
 
@@ -91,12 +118,39 @@
     "@aws-cdk/cdk" "^0.34.0"
     "@aws-cdk/region-info" "^0.34.0"
 
+"@aws-cdk/aws-kinesis@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-kinesis/-/aws-kinesis-0.34.0.tgz#bd2ecf9e946c77fda77bf23970b7413e1859ac00"
+  integrity sha512-AcXycAMz/fZPmx4pNYtyAd1lf9+HTMPQBeXHo3KtWTQJBtT671o3zLsA0QgePM3X9Om5+41yb37CBo2K/mdhsw==
+  dependencies:
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/aws-kms" "^0.34.0"
+    "@aws-cdk/aws-logs" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
 "@aws-cdk/aws-kms@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-kms/-/aws-kms-0.34.0.tgz#f5f9afbaf61bd596748519e349f8e1c639db6ba1"
   integrity sha512-p4UMsql0IbGgtbNkrYHlqoq6ne7dqKjIt4Xf3qGCWDAGiXWSlYntFHh6UBzKR0RzW6r0GODttSmypFolLkNUFw==
   dependencies:
     "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
+"@aws-cdk/aws-lambda-event-sources@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-lambda-event-sources/-/aws-lambda-event-sources-0.34.0.tgz#adfab11a643adcb955079f9e1357bcfe0f9864e8"
+  integrity sha512-PBM40VX5qQkeVW9kvKuU8ePGLSbiIMS0X1vOeclZUr/lFLa7vDfPzs2kh/3cC2PcJ4HT05UnrbFq55pizOyWcQ==
+  dependencies:
+    "@aws-cdk/aws-apigateway" "^0.34.0"
+    "@aws-cdk/aws-dynamodb" "^0.34.0"
+    "@aws-cdk/aws-events" "^0.34.0"
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/aws-kinesis" "^0.34.0"
+    "@aws-cdk/aws-lambda" "^0.34.0"
+    "@aws-cdk/aws-s3" "^0.34.0"
+    "@aws-cdk/aws-s3-notifications" "^0.34.0"
+    "@aws-cdk/aws-sns" "^0.34.0"
+    "@aws-cdk/aws-sqs" "^0.34.0"
     "@aws-cdk/cdk" "^0.34.0"
 
 "@aws-cdk/aws-lambda@^0.34.0":
@@ -133,6 +187,18 @@
     "@aws-cdk/aws-logs" "^0.34.0"
     "@aws-cdk/cdk" "^0.34.0"
     "@aws-cdk/cx-api" "^0.34.0"
+
+"@aws-cdk/aws-s3-notifications@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-s3-notifications/-/aws-s3-notifications-0.34.0.tgz#2f27d15b6226207a98230ebc0399d1d3ea25da6a"
+  integrity sha512-91ipih8EW15bAkZ4STSqRRPpvu7or0dkt1enxi0m4+z5UTxuwUbTAkPe50ZDROs5im3V6Ufzn7S4ELJxLKV7LA==
+  dependencies:
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/aws-lambda" "^0.34.0"
+    "@aws-cdk/aws-s3" "^0.34.0"
+    "@aws-cdk/aws-sns" "^0.34.0"
+    "@aws-cdk/aws-sqs" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
 
 "@aws-cdk/aws-s3@^0.34.0":
   version "0.34.0"

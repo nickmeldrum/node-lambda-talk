@@ -5,15 +5,15 @@ exports.handler = async event =>  {
 	console.log('APP-LOG', 'CV-Uploaded', Key)
 
 	const s3 = new S3()
-	const cvDoc = await s3.getObject({ Bucket: process.env.CV_BUCKET, Key }).promise()
+	const cvDoc = await s3.getObject({ bucket: process.env.CV_BUCKET, Key }).promise()
 	const cvJson = JSON.parse(cvDoc.Body.toString())
 
 	try {
 		const dynamo = new DynamoDB()
 		await dynamo.putItem({
 			Item: {
-				"Name": { S: cvJson.name || "UNKNOWN" }, 
-				"Skills": { S: cvJson.skills || "UNKNOWN" },
+				"Name": { S: cvJson.name }, 
+				"Skills": { S: cvJson.skills },
 			}, 
 			TableName: process.env.CANDIDATES_TABLE,
 		}).promise()
