@@ -1,0 +1,19 @@
+{
+  "version": "0.34.0",
+  "artifacts": {
+    "CdkInitStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://277625601220/us-east-1",
+      "properties": {
+        "templateFile": "CdkInitStack.template.json"
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cdk": "0.34.0",
+      "@aws-cdk/cx-api": "0.34.0",
+      "jsii-runtime": "node.js/v12.3.1"
+    }
+  }
+}

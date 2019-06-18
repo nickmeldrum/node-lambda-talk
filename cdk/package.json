@@ -1,0 +1,18 @@
+{
+  "name": "serverless-recruiter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "aws-cdk": "^0.34.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^0.34.0",
+    "@aws-cdk/aws-lambda": "^0.34.0",
+    "@aws-cdk/aws-s3": "^0.34.0",
+    "@aws-cdk/cdk": "^0.34.0"
+  }
+}

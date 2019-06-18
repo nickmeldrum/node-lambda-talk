@@ -1,0 +1,10 @@
+const cdk = require('@aws-cdk/cdk')
+
+class CdkInitStack extends cdk.Stack {
+  constructor(scope, id, props) {
+    super(scope, id, props)
+    // The code that defines your stack goes here
+  }
+}
+
+module.exports = { CdkInitStack }
