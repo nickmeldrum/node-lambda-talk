@@ -1,1 +1,712 @@
-{}
+{
+  "Resources": {
+    "CandidateServiceCVLibrary3996540D": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CVLibrary/Resource"
+      }
+    },
+    "CandidateServiceCandidateProfileServiceRole0085F70D": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "lambda.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ServiceRole/Resource"
+      }
+    },
+    "CandidateServiceCandidateProfileCE07AA46": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "CandidateServiceCandidateProfileCodeS3BucketF4E9F685"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "CandidateServiceCandidateProfileCodeS3VersionKey44951822"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "CandidateServiceCandidateProfileCodeS3VersionKey44951822"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "candidate-profile.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateProfileServiceRole0085F70D",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x"
+      },
+      "DependsOn": [
+        "CandidateServiceCandidateProfileServiceRole0085F70D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/Resource",
+        "aws:asset:path": "asset.251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CandidateServiceCandidateProfileApiPermissionGET842F7C3F": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateProfileCE07AA46",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "CandidateServiceCandidateApi827ACF3E"
+              },
+              "/",
+              {
+                "Ref": "CandidateServiceCandidateApiDeploymentStageprodD1919AD8"
+              },
+              "/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ApiPermission.GET.."
+      }
+    },
+    "CandidateServiceCandidateProfileApiPermissionTestGET49747404": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateProfileCE07AA46",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "CandidateServiceCandidateApi827ACF3E"
+              },
+              "/test-invoke-stage/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ApiPermission.Test.GET.."
+      }
+    },
+    "CandidateServiceCandidateProfileApiPermissionGETid9C21D01D": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateProfileCE07AA46",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "CandidateServiceCandidateApi827ACF3E"
+              },
+              "/",
+              {
+                "Ref": "CandidateServiceCandidateApiDeploymentStageprodD1919AD8"
+              },
+              "/GET/{id}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ApiPermission.GET..{id}"
+      }
+    },
+    "CandidateServiceCandidateProfileApiPermissionTestGETidA7C0F36B": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateProfileCE07AA46",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "CandidateServiceCandidateApi827ACF3E"
+              },
+              "/test-invoke-stage/GET/{id}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ApiPermission.Test.GET..{id}"
+      }
+    },
+    "CandidateServiceAnalyzeCVServiceRole0B59142E": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "lambda.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/ServiceRole/Resource"
+      }
+    },
+    "CandidateServiceAnalyzeCVServiceRoleDefaultPolicy0E6B8920": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CandidateServiceCVLibrary3996540D",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "CandidateServiceCVLibrary3996540D",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "CandidateServiceAnalyzeCVServiceRoleDefaultPolicy0E6B8920",
+        "Roles": [
+          {
+            "Ref": "CandidateServiceAnalyzeCVServiceRole0B59142E"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "CandidateServiceAnalyzeCV2284C345": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "CandidateServiceAnalyzeCVCodeS3Bucket90474A33"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "CandidateServiceAnalyzeCVCodeS3VersionKeyE5EAD488"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "CandidateServiceAnalyzeCVCodeS3VersionKeyE5EAD488"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "analyze-cv.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "CandidateServiceAnalyzeCVServiceRole0B59142E",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "BUCKET": {
+              "Ref": "CandidateServiceCVLibrary3996540D"
+            }
+          }
+        }
+      },
+      "DependsOn": [
+        "CandidateServiceAnalyzeCVServiceRoleDefaultPolicy0E6B8920",
+        "CandidateServiceAnalyzeCVServiceRole0B59142E"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/Resource",
+        "aws:asset:path": "asset.251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CandidateServiceCandidateApi827ACF3E": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Description": "Candidate access to their own profile",
+        "Name": "Candidate API"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiDeployment75B46515c90f67c3c871a3eab3ee92c95e9d0017": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "CandidateServiceCandidateApi827ACF3E"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "CandidateServiceCandidateApiidGET71AB37CD",
+        "CandidateServiceCandidateApiidD48CB246",
+        "CandidateServiceCandidateApiGETDBD52CA6"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Deployment/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiDeploymentStageprodD1919AD8": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "CandidateServiceCandidateApi827ACF3E"
+        },
+        "DeploymentId": {
+          "Ref": "CandidateServiceCandidateApiDeployment75B46515c90f67c3c871a3eab3ee92c95e9d0017"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/DeploymentStage.prod/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiCloudWatchRoleC62B46E5": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "apigateway.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/CloudWatchRole/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiAccount5DCDBF8D": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateApiCloudWatchRoleC62B46E5",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "CandidateServiceCandidateApi827ACF3E"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Account"
+      }
+    },
+    "CandidateServiceCandidateApiGETDBD52CA6": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateApi827ACF3E",
+            "RootResourceId"
+          ]
+        },
+        "RestApiId": {
+          "Ref": "CandidateServiceCandidateApi827ACF3E"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "RequestTemplates": {
+            "application/json": "{ \"statusCode\": \"200\" }"
+          },
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "CandidateServiceCandidateProfileCE07AA46",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Default/GET/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiidD48CB246": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "CandidateServiceCandidateApi827ACF3E",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "{id}",
+        "RestApiId": {
+          "Ref": "CandidateServiceCandidateApi827ACF3E"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Default/{id}/Resource"
+      }
+    },
+    "CandidateServiceCandidateApiidGET71AB37CD": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "CandidateServiceCandidateApiidD48CB246"
+        },
+        "RestApiId": {
+          "Ref": "CandidateServiceCandidateApi827ACF3E"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "CandidateServiceCandidateProfileCE07AA46",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateApi/Default/{id}/GET/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "CandidateServiceCandidateProfileCodeS3BucketF4E9F685": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"CdkInitStack/CandidateService/CandidateProfile/Code\""
+    },
+    "CandidateServiceCandidateProfileCodeS3VersionKey44951822": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"CdkInitStack/CandidateService/CandidateProfile/Code\""
+    },
+    "CandidateServiceCandidateProfileCodeArtifactHash559E826C": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"CdkInitStack/CandidateService/CandidateProfile/Code\""
+    },
+    "CandidateServiceAnalyzeCVCodeS3Bucket90474A33": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"CdkInitStack/CandidateService/AnalyzeCV/Code\""
+    },
+    "CandidateServiceAnalyzeCVCodeS3VersionKeyE5EAD488": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"CdkInitStack/CandidateService/AnalyzeCV/Code\""
+    },
+    "CandidateServiceAnalyzeCVCodeArtifactHash8FAC88E3": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"CdkInitStack/CandidateService/AnalyzeCV/Code\""
+    }
+  },
+  "Outputs": {
+    "CandidateServiceCandidateApiEndpoint55E374D7": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "CandidateServiceCandidateApi827ACF3E"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "CandidateServiceCandidateApiDeploymentStageprodD1919AD8"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}

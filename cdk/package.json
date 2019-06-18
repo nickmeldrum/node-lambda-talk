@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
+    "bootstrap": "cdk bootstrap",
+    "plan": "cdk synth",
+    "deploy": "cdk deploy",
     "cdk": "cdk"
   },
   "devDependencies": {

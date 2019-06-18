@@ -6,6 +6,560 @@
       "environment": "aws://277625601220/us-east-1",
       "properties": {
         "templateFile": "CdkInitStack.template.json"
+      },
+      "metadata": {
+        "/CdkInitStack/CandidateService/CVLibrary/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCVLibrary3996540D",
+            "trace": [
+              "new Bucket (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.js:273:26)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:10:20)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileServiceRole0085F70D",
+            "trace": [
+              "new Role (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/role.js:25:22)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:56:35)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileCE07AA46",
+            "trace": [
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:70:26)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/Code": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+              "id": "CdkInitStackCandidateServiceCandidateProfileCode6488BE1B",
+              "packaging": "zip",
+              "sourceHash": "251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+              "s3BucketParameter": "CandidateServiceCandidateProfileCodeS3BucketF4E9F685",
+              "s3KeyParameter": "CandidateServiceCandidateProfileCodeS3VersionKey44951822",
+              "artifactHashParameter": "CandidateServiceCandidateProfileCodeArtifactHash559E826C"
+            },
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:80:19)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/Code/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileCodeS3BucketF4E9F685",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:47:29)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/Code/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileCodeS3VersionKey44951822",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:51:26)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/Code/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileCodeArtifactHash559E826C",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:55:27)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:12:36)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/ApiPermission.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileApiPermissionGET842F7C3F",
+            "trace": [
+              "Function.addPermission (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:19:9)",
+              "LambdaIntegration.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:30:22)",
+              "Method.renderIntegration (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:72:21)",
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:26:31)",
+              "RootResource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:38:14)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/ApiPermission.Test.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileApiPermissionTestGET49747404",
+            "trace": [
+              "Function.addPermission (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:19:9)",
+              "LambdaIntegration.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:36:26)",
+              "Method.renderIntegration (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:72:21)",
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:26:31)",
+              "RootResource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:38:14)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/ApiPermission.GET..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileApiPermissionGETid9C21D01D",
+            "trace": [
+              "Function.addPermission (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:19:9)",
+              "LambdaIntegration.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:30:22)",
+              "Method.renderIntegration (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:72:21)",
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:26:31)",
+              "Resource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:44:13)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateProfile/ApiPermission.Test.GET..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateProfileApiPermissionTestGETidA7C0F36B",
+            "trace": [
+              "Function.addPermission (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:19:9)",
+              "LambdaIntegration.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:36:26)",
+              "Method.renderIntegration (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:72:21)",
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:26:31)",
+              "Resource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:44:13)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCVServiceRole0B59142E",
+            "trace": [
+              "new Role (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/role.js:25:22)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:56:35)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCVServiceRoleDefaultPolicy0E6B8920",
+            "trace": [
+              "new Policy (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/policy.js:23:26)",
+              "Role.addToPolicy (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/role.js:102:34)",
+              "Function.addToPrincipal (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/grant.js:50:65)",
+              "Function.addToPrincipalOrResource (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/grant.js:26:30)",
+              "Bucket.grant (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.js:226:31)",
+              "Bucket.grantReadWrite (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-s3/lib/bucket.js:188:21)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:27:12)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCV2284C345",
+            "trace": [
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:70:26)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/Code": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+              "id": "CdkInitStackCandidateServiceAnalyzeCVCodeD59E3222",
+              "packaging": "zip",
+              "sourceHash": "251d79183cf87d04265c7b70d93ec788673e5f4e843c1719be5231f49acf5d34",
+              "s3BucketParameter": "CandidateServiceAnalyzeCVCodeS3Bucket90474A33",
+              "s3KeyParameter": "CandidateServiceAnalyzeCVCodeS3VersionKeyE5EAD488",
+              "artifactHashParameter": "CandidateServiceAnalyzeCVCodeArtifactHash8FAC88E3"
+            },
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:80:19)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/Code/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCVCodeS3Bucket90474A33",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:47:29)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/Code/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCVCodeS3VersionKeyE5EAD488",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:51:26)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/AnalyzeCV/Code/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceAnalyzeCVCodeArtifactHash8FAC88E3",
+            "trace": [
+              "new Asset (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/assets/lib/asset.js:55:27)",
+              "AssetCode.bind (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/code.js:143:26)",
+              "new Function (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-lambda/lib/function.js:92:20)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:18:29)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApi827ACF3E",
+            "trace": [
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:23:26)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiDeployment75B46515c90f67c3c871a3eab3ee92c95e9d0017",
+            "trace": [
+              "new Deployment (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:39:25)",
+              "RestApi.configureDeployment (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:126:37)",
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:36:14)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiDeploymentStageprodD1919AD8",
+            "trace": [
+              "new Stage (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:27:26)",
+              "RestApi.configureDeployment (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:134:36)",
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:36:14)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiEndpoint55E374D7",
+            "trace": [
+              "RestApi.configureDeployment (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:138:13)",
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:36:14)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiCloudWatchRoleC62B46E5",
+            "trace": [
+              "new Role (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-iam/lib/role.js:25:22)",
+              "RestApi.configureCloudWatchRole (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:147:22)",
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:39:18)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiAccount5DCDBF8D",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:158:26)",
+              "new RestApi (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:39:18)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:29:17)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiGETDBD52CA6",
+            "trace": [
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:29:26)",
+              "RootResource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:38:14)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Default/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiidD48CB246",
+            "trace": [
+              "new Resource (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:66:26)",
+              "RootResource.addResource (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:12:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:40:30)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/CdkInitStack/CandidateService/CandidateApi/Default/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CandidateServiceCandidateApiidGET71AB37CD",
+            "trace": [
+              "new Method (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/method.js:29:26)",
+              "Resource.addMethod (/Users/nickmeldrum/src/node-lambda-talk/cdk/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:15:16)",
+              "new CandidateService (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/candidate-service.js:44:13)",
+              "new CdkInitStack (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/stack.js:8:5)",
+              "Object.<anonymous> (/Users/nickmeldrum/src/node-lambda-talk/cdk/cdk/init.js:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ]
       }
     }
   },
@@ -13,6 +567,17 @@
     "libraries": {
       "@aws-cdk/cdk": "0.34.0",
       "@aws-cdk/cx-api": "0.34.0",
+      "@aws-cdk/aws-apigateway": "0.34.0",
+      "@aws-cdk/aws-iam": "0.34.0",
+      "@aws-cdk/region-info": "0.34.0",
+      "@aws-cdk/aws-lambda": "0.34.0",
+      "@aws-cdk/aws-cloudwatch": "0.34.0",
+      "@aws-cdk/aws-ec2": "0.34.0",
+      "@aws-cdk/aws-sqs": "0.34.0",
+      "@aws-cdk/aws-kms": "0.34.0",
+      "@aws-cdk/assets": "0.34.0",
+      "@aws-cdk/aws-s3": "0.34.0",
+      "@aws-cdk/aws-events": "0.34.0",
       "jsii-runtime": "node.js/v12.3.1"
     }
   }
