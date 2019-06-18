@@ -165,7 +165,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/Resource",
-        "aws:asset:path": "asset.57a36f366a65fc95af1b901a19fc6ab69d7c234f0b1451c8de1447cbced14395",
+        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
         "aws:asset:property": "Code"
       }
     },
@@ -525,7 +525,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/Resource",
-        "aws:asset:path": "asset.57a36f366a65fc95af1b901a19fc6ab69d7c234f0b1451c8de1447cbced14395",
+        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
         "aws:asset:property": "Code"
       }
     },
@@ -621,6 +621,11 @@
               "Action": "dynamodb:ListStreams",
               "Effect": "Allow",
               "Resource": "*"
+            },
+            {
+              "Action": "ses:*",
+              "Effect": "Allow",
+              "Resource": "*"
             }
           ],
           "Version": "2012-10-17"
@@ -699,7 +704,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/EmailClerk/Resource",
-        "aws:asset:path": "asset.57a36f366a65fc95af1b901a19fc6ab69d7c234f0b1451c8de1447cbced14395",
+        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
         "aws:asset:property": "Code"
       }
     },

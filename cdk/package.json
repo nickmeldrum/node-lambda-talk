@@ -11,11 +11,13 @@
   },
   "devDependencies": {
     "@aws-cdk/aws-apigateway": "^0.34.0",
+    "@aws-cdk/aws-dynamodb": "^0.34.0",
+    "@aws-cdk/aws-iam": "^0.34.0",
     "@aws-cdk/aws-lambda": "^0.34.0",
     "@aws-cdk/aws-lambda-event-sources": "^0.34.0",
     "@aws-cdk/aws-s3": "^0.34.0",
+    "@aws-cdk/aws-ses": "^0.34.0",
     "@aws-cdk/cdk": "^0.34.0",
-    "aws-cdk": "^0.34.0",
-    "@aws-cdk/aws-dynamodb": "^0.34.0"
+    "aws-cdk": "^0.34.0"
   }
 }

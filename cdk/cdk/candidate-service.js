@@ -1,9 +1,11 @@
 const cdk = require("@aws-cdk/cdk")
+const iam = require('@aws-cdk/aws-iam')
 const apigateway = require("@aws-cdk/aws-apigateway")
 const lambda = require("@aws-cdk/aws-lambda")
 const eventSources = require("@aws-cdk/aws-lambda-event-sources")
 const s3 = require("@aws-cdk/aws-s3")
 const dynamodb = require("@aws-cdk/aws-dynamodb")
+const ses = require("@aws-cdk/aws-ses")
 
 class CandidateService extends cdk.Construct {
 	constructor(scope, id) {
@@ -52,6 +54,10 @@ class CandidateService extends cdk.Construct {
 		emailClerkLambda.addEventSource(new eventSources.DynamoEventSource(candidatesTable, {
 			startingPosition: "LATEST",
 		}))
+
+		emailClerkLambda.addToRolePolicy(new iam.PolicyStatement()
+			 .addResource('*')
+			 .addAction('ses:*'))
 
 		const api = new apigateway.RestApi(this, "CandidateApi", {
 			restApiName: "Candidate API",

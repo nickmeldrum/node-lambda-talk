@@ -210,6 +210,18 @@
     "@aws-cdk/aws-kms" "^0.34.0"
     "@aws-cdk/cdk" "^0.34.0"
 
+"@aws-cdk/aws-ses@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ses/-/aws-ses-0.34.0.tgz#668a4c158a1050598a83f0c0083bfe339fbbe1a9"
+  integrity sha512-1kGYSwM0naZy+N+oDbZbywwp3ReT1FMYYwH+lgeVFl+w8Lu/Xx/Ga5PgodAJHGrIPsaevqrJyguluEjBYLgNgA==
+  dependencies:
+    "@aws-cdk/aws-iam" "^0.34.0"
+    "@aws-cdk/aws-kms" "^0.34.0"
+    "@aws-cdk/aws-lambda" "^0.34.0"
+    "@aws-cdk/aws-s3" "^0.34.0"
+    "@aws-cdk/aws-sns" "^0.34.0"
+    "@aws-cdk/cdk" "^0.34.0"
+
 "@aws-cdk/aws-sns@^0.34.0":
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-sns/-/aws-sns-0.34.0.tgz#d02d30b02ca82de236dd9ea01e5e31c8cb5966bc"
