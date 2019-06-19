@@ -1,4 +1,4 @@
-const { DynamoDB, SES } = require('aws-sdk')
+const { SES } = require('aws-sdk')
 
 exports.handler = async event =>  {
 	const dynamodbEvent = event.Records[0].dynamodb

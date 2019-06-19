@@ -214,7 +214,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/Resource",
-        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
+        "aws:asset:path": "asset.6b2013e574abb685acc2cfa66c0a9276764585a66fe3948b351ac9992bc7ae53",
         "aws:asset:property": "Code"
       }
     },
@@ -574,7 +574,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/Resource",
-        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
+        "aws:asset:path": "asset.6b2013e574abb685acc2cfa66c0a9276764585a66fe3948b351ac9992bc7ae53",
         "aws:asset:property": "Code"
       }
     },
@@ -779,7 +779,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/EmailClerk/Resource",
-        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
+        "aws:asset:path": "asset.6b2013e574abb685acc2cfa66c0a9276764585a66fe3948b351ac9992bc7ae53",
         "aws:asset:property": "Code"
       }
     },

@@ -1,6 +1,6 @@
 const { DynamoDB, S3 } = require('aws-sdk')
 
-exports.handler = async event => {
+exports.handler = async event =>  {
 	const Key = event.Records[0].s3.object.key
 	console.log('APP-LOG', 'CV-Uploaded', Key)
 
