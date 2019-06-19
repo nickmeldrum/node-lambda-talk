@@ -110,6 +110,47 @@
         "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ServiceRole/Resource"
       }
     },
+    "CandidateServiceCandidateProfileServiceRoleDefaultPolicyD03DF3A3": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CandidateServiceCandidates57DC91CB",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "CandidateServiceCandidateProfileServiceRoleDefaultPolicyD03DF3A3",
+        "Roles": [
+          {
+            "Ref": "CandidateServiceCandidateProfileServiceRole0085F70D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
     "CandidateServiceCandidateProfileCE07AA46": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -158,14 +199,22 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs10.x"
+        "Runtime": "nodejs10.x",
+        "Environment": {
+          "Variables": {
+            "CANDIDATES_TABLE": {
+              "Ref": "CandidateServiceCandidates57DC91CB"
+            }
+          }
+        }
       },
       "DependsOn": [
+        "CandidateServiceCandidateProfileServiceRoleDefaultPolicyD03DF3A3",
         "CandidateServiceCandidateProfileServiceRole0085F70D"
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/CandidateProfile/Resource",
-        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
+        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
         "aws:asset:property": "Code"
       }
     },
@@ -525,7 +574,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/AnalyzeCV/Resource",
-        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
+        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
         "aws:asset:property": "Code"
       }
     },
@@ -603,6 +652,32 @@
       "Properties": {
         "PolicyDocument": {
           "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "CandidateServiceCandidates57DC91CB",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            },
             {
               "Action": [
                 "dynamodb:DescribeStream",
@@ -704,7 +779,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "CdkInitStack/CandidateService/EmailClerk/Resource",
-        "aws:asset:path": "asset.ad99046df3f7f06bd39e4995952648eeaba1fad08cb1a9f7f69d201514d20187",
+        "aws:asset:path": "asset.00cc1f4619b9c6eb86638d9b4090706cfae18d926c86c937707e50007f43a523",
         "aws:asset:property": "Code"
       }
     },

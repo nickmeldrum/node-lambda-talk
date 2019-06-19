@@ -21,13 +21,16 @@ class CandidateService extends cdk.Construct {
 
 		const candidateProfileLambda = new lambda.Function(this, "CandidateProfile", {
 			runtime: lambda.Runtime.NodeJS10x,
-			code: lambda.Code.directory("resources"),
+			code: lambda.Code.directory("lambdas"),
 			handler: "candidate-profile.handler",
+			environment: {
+				CANDIDATES_TABLE: candidatesTable.tableName
+			}
 		})
 
 		const analyzeCVLambda = new lambda.Function(this, "AnalyzeCV", {
 			runtime: lambda.Runtime.NodeJS10x,
-			code: lambda.Code.directory("resources"),
+			code: lambda.Code.directory("lambdas"),
 			handler: "analyze-cv.handler",
 			environment: {
 				CV_BUCKET: cvBucket.bucketName,
@@ -37,7 +40,7 @@ class CandidateService extends cdk.Construct {
 
 		const emailClerkLambda = new lambda.Function(this, "EmailClerk", {
 			runtime: lambda.Runtime.NodeJS10x,
-			code: lambda.Code.directory("resources"),
+			code: lambda.Code.directory("lambdas"),
 			handler: "email-clerk.handler",
 			environment: {
 				CANDIDATES_TABLE: candidatesTable.tableName
@@ -46,6 +49,8 @@ class CandidateService extends cdk.Construct {
 
 		cvBucket.grantReadWrite(analyzeCVLambda)
 		candidatesTable.grantReadWriteData(analyzeCVLambda.role)
+		candidatesTable.grantReadWriteData(emailClerkLambda.role)
+		candidatesTable.grantReadData(candidateProfileLambda.role)
 
 		analyzeCVLambda.addEventSource(new eventSources.S3EventSource(cvBucket, {
 			events: [s3.EventType.ObjectCreated],
